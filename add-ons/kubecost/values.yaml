@@ -15,6 +15,11 @@ kubecostMetrics:
   emitNamespaceAnnotations: true
 
 prometheus:
+  nodeExporter:
+    enabled: false
+  serviceAccounts:
+    nodeExporter:
+      create: false
   server:
     image:
       repository: public.ecr.aws/kubecost/prometheus
