@@ -2,13 +2,6 @@ global:
   grafana:
     enabled: false
     proxy: false
-  prometheus:
-    serviceAccounts:
-      nodeExporter:
-        create: false
-
-nodeExporter:
-  enabled: false
 
 imageVersion: prod-1.96.0
 kubecostFrontend:
