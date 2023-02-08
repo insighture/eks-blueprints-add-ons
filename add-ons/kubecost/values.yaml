@@ -2,6 +2,12 @@ global:
   grafana:
     enabled: false
     proxy: false
+  prometheus:
+    nodeExporter:
+      enabled: false
+    serviceAccounts:
+      nodeExporter:
+        create: false
 
 imageVersion: prod-1.96.0
 kubecostFrontend:
@@ -15,11 +21,6 @@ kubecostMetrics:
   emitNamespaceAnnotations: true
 
 prometheus:
-  nodeExporter:
-    enabled: false
-  serviceAccounts:
-    nodeExporter:
-      create: false
   server:
     image:
       repository: public.ecr.aws/kubecost/prometheus
