@@ -16,10 +16,7 @@ kubecostMetrics:
 
 prometheus:
   nodeExporter:
-    enabled: false
-  serviceAccounts:
-    nodeExporter:
-      create: false
+    hostNetwork: false
   server:
     image:
       repository: public.ecr.aws/kubecost/prometheus
