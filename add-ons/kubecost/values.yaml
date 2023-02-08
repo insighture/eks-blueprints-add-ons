@@ -16,7 +16,8 @@ kubecostMetrics:
 
 prometheus:
   nodeExporter:
-    hostNetwork: false
+    service:
+      hostPort: 9200
   server:
     image:
       repository: public.ecr.aws/kubecost/prometheus
