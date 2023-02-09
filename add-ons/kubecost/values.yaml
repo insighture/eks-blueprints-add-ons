@@ -20,6 +20,13 @@ prometheus:
       repository: public.ecr.aws/kubecost/prometheus
       tag: v2.35.0
 
+  nodeExporter:
+    enabled: false
+  
+  serviceAccounts:
+    nodeExporter:
+      create: false
+
   configmapReload:
     prometheus:
       image:
